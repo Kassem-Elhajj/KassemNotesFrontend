@@ -29,7 +29,7 @@ function Login() {
 
     axios.post('https://kassemnotes.onrender.com/auth/login',
       formData,
-      headers: { "Content-Type": "application/json" },
+      {headers: { "Content-Type": "application/json" }},
       {withCredentials: true}
     ).then(res => {
 
