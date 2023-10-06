@@ -27,7 +27,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:3500/auth/login',
+    axios.post('https://kassemnotes.onrender.com/auth/login',
       formData,
       {withCredentials: true}
     ).then(res => {
