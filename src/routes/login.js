@@ -44,9 +44,9 @@ function Login() {
     
   };
 
-  if(navigation){
-    window.location.assign('https://kassemnotesfrontend.onrender.com')
-  }
+  // if(navigation){
+  //   window.location.assign('https://kassemnotesfrontend.onrender.com')
+  // }
 
   if(username){
     return <Navigate to = {'*'} />
