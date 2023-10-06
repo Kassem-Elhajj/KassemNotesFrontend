@@ -15,7 +15,7 @@ const CardMoreInfo = (props) => {
       <div>
         {/* Larger Image */}
         <img className='mt-5'
-          src= {`http://localhost:3500/assets/${note.imageSrc}`}
+          src= {`https://kassemnotes.onrender.com/assets/${note.imageSrc}`}
           alt="Image"
           style={{ width: '100%', maxWidth: '100%' }}
         />
@@ -40,7 +40,7 @@ const CardMoreInfo = (props) => {
                 <Card.Text className="text-muted">Created in: {note.date}</Card.Text>
                 {/* Voice Player */}
                 <audio controls>
-                  <source src= {`http://localhost:3500/assets/${note.audioSrc}`} type="audio/mpeg" />
+                  <source src= {`https://kassemnotes.onrender.com/assets/${note.audioSrc}`} type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
               </Card.Body>
