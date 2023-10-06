@@ -13,7 +13,7 @@ function NavigationBar() {
   useEffect(() => {
 
     try{
-      axios.get('http://localhost:3500/auth/profile',
+      axios.get('https://kassemnotes.onrender.com/auth/profile',
         {withCredentials: true}
 
       ).then(async res => {
@@ -36,7 +36,7 @@ function NavigationBar() {
 
   const handleLogoutButton = () => {
 
-    axios.delete('http://localhost:3500/auth/logout', {withCredentials: true})
+    axios.delete('https://kassemnotes.onrender.com/auth/logout', {withCredentials: true})
     setUserInfo(null)
 
   }
@@ -66,7 +66,7 @@ function NavigationBar() {
           <Nav.Link  className='mx-1' href="#">
             <Nav.Item>
             <img
-              src= {`http://localhost:3500/assets/${UserInfo.picturePath}`}
+              src= {`https://kassemnotes.onrender.com/assets/${UserInfo.picturePath}`}
               alt="Profile"
               className="rounded-circle"
               width="30"
