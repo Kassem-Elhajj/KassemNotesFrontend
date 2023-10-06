@@ -45,7 +45,7 @@ function Login() {
   };
 
   if(navigation){
-    window.location.assign('http://localhost:3000')
+    window.location.assign('https://kassemnotesfrontend.onrender.com')
   }
 
   if(username){
