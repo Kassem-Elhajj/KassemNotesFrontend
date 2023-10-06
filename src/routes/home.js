@@ -35,7 +35,7 @@ const Home = () => {
 
   useEffect(() => {
 
-    axios.get(`http://localhost:3500/notes/getNotes/${username}/${selectedOption}`, {withCredentials: true}).then(res => {
+    axios.get(`https://kassemnotes.onrender.com/notes/getNotes/${username}/${selectedOption}`, {withCredentials: true}).then(res => {
       setNotes(res.data.notes)
     }).catch(err => alert(err.message))
 
