@@ -52,7 +52,7 @@ function Post() {
         audioData.append('audio',audioFile)
 
         if(username){
-          axios.post(`http://localhost:3500/notes/post1/${username}`,
+          axios.post(`https://kassemnotes.onrender.com/notes/post1/${username}`,
             pictureAndTitleData,
             {withCredentials: true}
 
@@ -60,7 +60,7 @@ function Post() {
             // console.log(res.data)
 
             const noteId = res.data.note._id
-            axios.post(`http://localhost:3500/notes/post2/${noteId}`,
+            axios.post(`https://kassemnotes.onrender.com/notes/post2/${noteId}`,
             audioData,
             {withCredentials: true}
 
@@ -68,7 +68,7 @@ function Post() {
 
               if(res.data.status === 'ok'){
                 alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
-                window.location.assign('http://localhost:3000/')
+                window.location.assign('https://kassemnotesfrontend.onrender.com/')
               }else{
                 alert(res.data.message)
               }
@@ -78,7 +78,7 @@ function Post() {
           }).catch(err => console.log(err.message))
       }else{
         alert('Login before posting any note!')
-        window.location.assign('http://localhost:3000/login')
+        window.location.assign('https://kassemnotesfrontend.onrender.com/login')
       }
         
     };
