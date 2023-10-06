@@ -46,7 +46,7 @@ function Register() {
         allData.append('birthDate',bodyData.birthDate)
 
         axios.post(
-            "http://localhost:3500/auth/register",
+            "https://kassemnotes.onrender.com/auth/register",
             allData,
             {withCredentials: true}
         ).then(res => {
