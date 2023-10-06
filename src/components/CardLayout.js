@@ -13,7 +13,7 @@ function MyCard({ imageSrc, title, subject, description, audioSrc, date, noteId 
 
     const onDeleteClick = async () => {
         
-      await axios.delete(`http://localhost:3500/notes/deleteNote/${noteId}`,
+      await axios.delete(`https://kassemnotes.onrender.com/notes/deleteNote/${noteId}`,
         {withCredentials: true}
       ).then(res => {
 
@@ -37,8 +37,8 @@ function MyCard({ imageSrc, title, subject, description, audioSrc, date, noteId 
 
     }
 
-    const audioPath = `http://localhost:3500/assets/${audioSrc}`
-    const picturePath = `http://localhost:3500/assets/${imageSrc}`
+    const audioPath = `https://kassemnotes.onrender.com/assets/${audioSrc}`
+    const picturePath = `https://kassemnotes.onrender.com/assets/${imageSrc}`
     let partialDescription = description.substring(0,30)
 
     if(partialDescription.length !== description.length){
