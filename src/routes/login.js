@@ -29,14 +29,6 @@ function Login() {
 
     axios.post('https://kassemnotes.onrender.com/auth/login',
       formData,
-      // { 
-      //   crossDomain: true,
-      //   headers: {
-      //               "Content-Type": "application/json" ,
-      //               Accept: "application/json",
-      //               "Access-Control-Allow-Origin": "",
-      //            },
-      // },
       {withCredentials: true}
     ).then(res => {
 
@@ -52,9 +44,9 @@ function Login() {
     
   };
 
-  // if(navigation){
-  //   window.location.assign('https://kassemnotesfrontend.onrender.com')
-  // }
+  if(navigation){
+    window.location.assign('https://kassemnotesfrontend.onrender.com')
+  }
 
   if(username){
     return <Navigate to = {'*'} />
