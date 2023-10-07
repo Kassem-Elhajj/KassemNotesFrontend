@@ -70,7 +70,7 @@ function Post() {
             ).then(res => {
 
               if(res.data.status === 'ok'){
-                alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
+                // alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
                 window.location.assign('https://kassemnotesfrontend.onrender.com/')
               }else{
                 alert(res.data.message)
