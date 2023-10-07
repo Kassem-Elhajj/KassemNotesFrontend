@@ -14,6 +14,7 @@ function Post() {
     });
     const [picture, setPicture] = useState()
     const [audioFile, setAudioFile] = useState(null);
+    const [isButtonDisabled, setButtonDisabled] = useState(false);
 
 
     const handleChange = async (e) => {
@@ -39,6 +40,8 @@ function Post() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        setButtonDisabled(true)
 
         const username = UserInfo?.username
 
@@ -141,7 +144,7 @@ function Post() {
         </Form>
 
         <div className="text-center mt-3"> {/* Add text-center class for center alignment and mt-3 for margin-top */}
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" disabled={isButtonDisabled}>
             Create Note
           </Button>
         </div>
