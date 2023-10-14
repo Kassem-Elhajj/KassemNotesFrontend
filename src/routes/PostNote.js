@@ -46,13 +46,13 @@ function Post() {
         const username = UserInfo?.username
 
         const pictureAndTitleData = new FormData()
-        const audioData = new FormData()
+        // const audioData = new FormData()
 
         pictureAndTitleData.append('picture', picture)
         pictureAndTitleData.append('title',bodyData.title)
         pictureAndTitleData.append('subject',bodyData.subject)
         pictureAndTitleData.append('description',bodyData.description)
-        audioData.append('audio',audioFile)
+        // audioData.append('audio',audioFile)
 
         if(username){
           axios.post(`https://kassemnotes.onrender.com/notes/post1/${username}`,
