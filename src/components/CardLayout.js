@@ -51,8 +51,8 @@ function MyCard({ imageSrc, title, subject, description, audioSrc, date, noteId 
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{subject}</Card.Subtitle>
-        <Card.Text>{partialDescription}</Card.Text>
-        <AudioPlayer src={audioPath} controls style={{width: "280px"}} />
+        <Card.Text>Description: {partialDescription}</Card.Text>
+        {/* <AudioPlayer src={audioPath} controls style={{width: "280px"}} /> */}
         <Card.Text className="mb-1 text-muted mt-2">created: {date}</Card.Text>
       </Card.Body>
       <Button variant="primary" onClick={onMoreInfoClick}>More Info</Button>
