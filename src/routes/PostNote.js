@@ -143,12 +143,12 @@ function Post() {
           />
         </Form.Group>
 
-        {/*<Form>
+        {/* <Form>
           <Form.Group controlId="formFile" className="mb-3 mt-1">
             <Form.Label>Select an audio file:</Form.Label>
             <Form.Control type="file" accept=".mp3,.wav" onChange={handleChange} />
           </Form.Group>
-        </Form>*/}
+        </Form> */}
 
         <div className="text-center mt-3"> {/* Add text-center class for center alignment and mt-3 for margin-top */}
           <Button variant="primary" type="submit" disabled={isButtonDisabled}>
