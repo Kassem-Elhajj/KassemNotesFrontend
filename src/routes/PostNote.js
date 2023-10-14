@@ -38,10 +38,12 @@ function Post() {
     }
     };
 
+        
+        
+        
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        setButtonDisabled(true)
 
         const username = UserInfo?.username
 
@@ -62,25 +64,25 @@ function Post() {
           ).then(res => {
             // console.log(res.data)
 
-            
             if(res.data.status === 'ok'){
-                // alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
-                window.location.assign('https://kassemnotesfrontend.onrender.com/')
-              }else{
-                alert(res.data.message)
-                
+              alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
+              window.location.assign('https://kassemnotesfrontend.onrender.com/')
+            }else{
+              alert(res.data.message)
+            }
+
             // const noteId = res.data.note._id
-            // axios.post(`https://kassemnotes.onrender.com/notes/post2/${noteId}`,
+            // axios.post(`http://localhost:3500/notes/post2/${noteId}`,
             // audioData,
             // {withCredentials: true}
 
             // ).then(res => {
 
-              // if(res.data.status === 'ok'){
-              //   // alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
-              //   window.location.assign('https://kassemnotesfrontend.onrender.com/')
-              // }else{
-              //   alert(res.data.message)
+            //   if(res.data.status === 'ok'){
+            //     alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
+            //     window.location.assign('http://localhost:3000/')
+            //   }else{
+            //     alert(res.data.message)
             //   }
 
             // }).catch(err => console.log(err.message))
