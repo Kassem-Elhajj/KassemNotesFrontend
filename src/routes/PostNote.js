@@ -62,21 +62,28 @@ function Post() {
           ).then(res => {
             // console.log(res.data)
 
-            const noteId = res.data.note._id
-            axios.post(`https://kassemnotes.onrender.com/notes/post2/${noteId}`,
-            audioData,
-            {withCredentials: true}
-
-            ).then(res => {
-
-              if(res.data.status === 'ok'){
+            
+            if(res.data.status === 'ok'){
                 // alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
                 window.location.assign('https://kassemnotesfrontend.onrender.com/')
               }else{
                 alert(res.data.message)
-              }
+                
+            // const noteId = res.data.note._id
+            // axios.post(`https://kassemnotes.onrender.com/notes/post2/${noteId}`,
+            // audioData,
+            // {withCredentials: true}
 
-            }).catch(err => console.log(err.message))
+            // ).then(res => {
+
+              // if(res.data.status === 'ok'){
+              //   // alert(`NOTE HAS BEEN CREATED WITH TITLE : ${bodyData.title.toUpperCase()}`)
+              //   window.location.assign('https://kassemnotesfrontend.onrender.com/')
+              // }else{
+              //   alert(res.data.message)
+            //   }
+
+            // }).catch(err => console.log(err.message))
 
           }).catch(err => console.log(err.message))
       }else{
@@ -136,12 +143,12 @@ function Post() {
           />
         </Form.Group>
 
-        <Form>
-          <Form.Group controlId="formFile" className="mb-3 mt-1">
-            <Form.Label>Select an audio file:</Form.Label>
-            <Form.Control type="file" accept=".mp3,.wav" onChange={handleChange} />
-          </Form.Group>
-        </Form>
+        // <Form>
+        //   <Form.Group controlId="formFile" className="mb-3 mt-1">
+        //     <Form.Label>Select an audio file:</Form.Label>
+        //     <Form.Control type="file" accept=".mp3,.wav" onChange={handleChange} />
+        //   </Form.Group>
+        // </Form>
 
         <div className="text-center mt-3"> {/* Add text-center class for center alignment and mt-3 for margin-top */}
           <Button variant="primary" type="submit" disabled={isButtonDisabled}>
